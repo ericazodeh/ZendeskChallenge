@@ -35,6 +35,8 @@ class TestTicketViewer(unittest.TestCase):
         ticket.getAllPages()
         #request a bad ticket id based off user input
         ticket.viewSingleTicket(user_input)
+
+        #Assert
         self.assertTrue(ticket.invalidCommandFlag == True and ticket.lastErrorMessage == "Error: Could not find the given ID. Please try something else.")
 
     def test_previous_page_when_on_first_page(self):
